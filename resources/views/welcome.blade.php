@@ -110,7 +110,7 @@
         <!-- section close -->
 
         <!-- section begin -->
-        <section id="section-resume" class="dark" data-bgimage="url(images/background/bg.jpeg) top fixed">
+        <section id="section-resume" class="dark" data-bgimage="url(./assets/images/background/bg.webp) top fixed">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-12 wow fadeInRight">
@@ -211,7 +211,7 @@
         <!-- section close -->
 
         <!-- section begin -->
-        <section id="section-resume" class="dark" data-bgimage="url(images/background/bg.jpeg) top fixed">
+        <section id="section-resume" class="dark" data-bgimage="url(./assets/images/background/bg.webp) top fixed">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-12 wow fadeInRight">
@@ -312,7 +312,7 @@
         <!-- section close -->
 
         <!-- section begin -->
-        <section id="section-about" class="dark" data-bgimage="url(images/background/bg.jpeg) top fixed">
+        <section id="section-about" class="dark" data-bgimage="url(./assets/images/background/bg.webp) top fixed">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 wow fadeInRight">
@@ -450,7 +450,7 @@
         <!-- section close -->
 
         <!-- section begin -->
-        <section id="section-portfolio" class="dark" data-bgimage="url(images/background/bg.jpeg) top fixed">
+        <section id="section-portfolio" class="dark" data-bgimage="url(./assets/images/background/bg.webp) top fixed">
             <div class="container">
                 <!-- portfolio filter begin -->
                 <div class="row">
@@ -537,7 +537,7 @@
         <!-- section close -->
 
         <!-- section begin -->
-        <section id="section-blog" class="dark" data-bgimage="url(images/background/bg.jpeg) top fixed">
+        <section id="section-blog" class="dark" data-bgimage="url(./assets/images/background/bg.webp) top fixed">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 wow fadeInRight">
@@ -673,7 +673,7 @@
         <!-- section close -->
 
         <!-- section begin -->
-        <section id="section-contact" class="dark" data-bgimage="url(images/background/bg.jpeg) top fixed">
+        <section id="section-contact" class="dark" data-bgimage="url(./assets/images/background/bg.webp) top fixed">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 wow fadeInRight">
