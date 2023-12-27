@@ -44,7 +44,7 @@
                             <!-- logo begin -->
                             <div id="logo">
                                 <a href="index.html">
-                                    Amalia Jördis
+                                    Panji Denis Giantoro
                                 </a>
                             </div>
                             <!-- logo close -->
