@@ -82,7 +82,7 @@
         <div id="top"></div>
         <!-- section begin -->
         <section id="section-main" class="vertical-center" data-bgimage="url(./assets/images/background/bg.png) "  data-stellar-background-ratio=".1"
-                    data-bgcolor="#111111">
+                    >
             <div id="particles-js"></div>
             <div id="v-wrap">
                 <div class="vw-inner">
