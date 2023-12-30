@@ -26,7 +26,6 @@
     <link id="colors" href="{{asset('assets') }}/css/colors/scheme-02.css" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets') }}/css/coloring.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
 <div id="wrapper">
     <div id="btn-exit">
@@ -47,7 +46,6 @@
                                     Panji Denis Giantoro
                                 </a>
                             </div>
-                            <!-- logo close -->
                         </div>
                         <div class="align-self-center ml-auto header-col-mid">
                             <!-- mainmenu begin -->
@@ -91,14 +89,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 wow fadeIn" data-wow-delay=".25s">
-                        <h1 class="big text-light">Amalia Jördis</h1>
+                        <h1 class="big text-light">Panji Denis Giantoro</h1>
                         <div class="spacer-half"></div>
                         <div class="typed-words">
                             I Am
                             <div class="typed-strings">
-                                <p>Designer</p>
+                                <p>Content Creator</p>
                                 <p>Programmer</p>
-                                <p>Photographer</p>
+                                <p>Freelancer</p>
                             </div>
                             <div class="typed"></div>
                         </div>

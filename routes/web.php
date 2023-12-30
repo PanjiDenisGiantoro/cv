@@ -15,12 +15,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+//    get table invest_product
+    return view('welcome', [
+        'invest_products' => \App\Models\Invest_products::all()
+    ]);
+});
+
+Route::get('/products',\App\Http\Controllers\GetDataInvestProductController::class);
+Route::prefix('resume')->group(function () {
+    Route::get('/',[\App\Http\Controllers\ResumeController::class,'index'])->name('resume.index');
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('home');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -35,7 +44,6 @@ Route::prefix('canvas-ui')->group(function () {
         Route::get('posts', [\App\Http\Controllers\CanvasUiController::class, 'getPosts']);
         Route::get('posts/{slug}', [\App\Http\Controllers\CanvasUiController::class, 'showPost'])
              ->middleware('Canvas\Http\Middleware\Session');
-
         Route::get('tags', [\App\Http\Controllers\CanvasUiController::class, 'getTags']);
         Route::get('tags/{slug}', [\App\Http\Controllers\CanvasUiController::class, 'showTag']);
         Route::get('tags/{slug}/posts', [\App\Http\Controllers\CanvasUiController::class, 'getPostsForTag']);

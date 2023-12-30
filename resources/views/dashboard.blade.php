@@ -1,17 +1,20 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth group" data-sidebar="brand" dir="ltr">
+@include('layouts_backend.head')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
-        </div>
-    </div>
-</x-app-layout>
+<body data-layout-mode="light" data-sidebar-size="default" data-theme-layout="vertical"
+      class="bg-[#EEF0FC] dark:bg-gray-900">
+
+<!-- leftbar-tab-menu -->
+
+
+@include('layouts_backend.sidebar')
+
+@include('layouts_backend.nav')
+
+@yield('content')
+
+@include('layouts_backend.footer')
+
+</body>
+</html>

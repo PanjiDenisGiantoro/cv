@@ -170,6 +170,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\TelescopeServiceProvider::class,
         App\Providers\CanvasServiceProvider::class,
+        \Torann\GeoIP\GeoIPServiceProvider::class,
+
     ])->toArray(),
 
     /*
@@ -184,6 +186,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'GeoIP' => \Torann\GeoIP\Facades\GeoIP::class,
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
