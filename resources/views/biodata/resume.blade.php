@@ -10,18 +10,10 @@
                             <div class="flex flex-wrap justify-between">
                                 <div class="items-center ">
                                     <h1 class="font-medium text-3xl block dark:text-slate-100">Profile</h1>
-                                    <ol class="list-reset flex text-sm">
-                                        <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
-                                        <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
-                                        <li class="text-gray-500 dark:text-slate-400">Pages</li>
-                                        <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
-                                        <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Profile</li>
-                                    </ol>
+
                                 </div><!--end /div-->
                                 <div class="flex items-center">
-                                    <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
-                                        <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
-                                    </div>
+
                                 </div><!--end /div-->
                             </div><!--end /div-->
                         </div><!--end /div-->
@@ -41,14 +33,16 @@
                                     <div class="sm:col-span-12  md:col-span-12 lg:col-span-6 xl:col-span-6 ">
                                         <div class="flex items-center relative -mt-[74px]">
                                             <div class="w-36 h-36 relative">
-                                                <img src="{{ asset('backend') }}/assets/images/users/avatar-7.png" alt="" class="rounded-full border-[8px] border-white dark:border-slate-800">
+                                                <img src="{{ asset('assets') }}/images/background/bg.png" alt="" class="rounded-full border-[8px] border-white dark:border-slate-800">
                                                 <span class="absolute cursor-pointer w-7 h-7 bg-green-600 rounded-full bottom-4 right-3 flex items-center justify-center border-2 border-white dark:border-slate-800">
                                                         <i class="fas fa-camera text-white text-xs"></i>
                                                     </span>
                                             </div>
                                             <div class="self-end ml-3">
-                                                <h5 class="text-xl  md:text-[28px] font-semibold sm:text-white md:text-slate-700 dark:text-gray-300 mb-0 md:mb-2">Rosa Dodson</h5>
-                                                <p class="block text-xs lg:text-base  font-medium text-slate-500">UI/UX Designer, USA</p>
+                                                <h5 class="text-xl  md:text-[28px] font-semibold sm:text-white md:text-slate-700 dark:text-gray-300 mb-0 md:mb-2">{{ env('APP_NAME') }}</h5>
+                                                <p class="block text-xs lg:text-base  font-medium text-slate-500">
+                                                    <span class="text-slate-500 dark:text-slate-400">FullStack Developer</span>
+                                                </p>
                                             </div>
                                         </div>
                                     </div><!--end col-->
@@ -60,6 +54,7 @@
                                                     <span class="self-center px-2 font-medium dark:text-slate-400">Facebook</span>
                                                 </div>
                                             </div><!--end col-->
+
                                             <div class="col-span-6  md:col-span-3 lg:col-span-3 xl:col-span-3 ">
                                                 <div class="border-2 border-slate-200/50 dark:border-slate-600/60 inline-flex rounded-full cursor-pointer ml-0 md:ml-1">
                                                     <img src="{{ asset('backend') }}/assets/images/logos/insta.png" alt="" class="rounded-full h-9 w-9">
@@ -110,6 +105,7 @@
 
                 <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
                     <div class="sm:col-span-12  md:col-span-12 lg:col-span-3 xl:col-span-3 ">
+                    <form action="">
                         <div class="bg-white dark:bg-slate-800 shadow  rounded-md w-full relative">
                             <div class="flex-auto p-4">
                                 <h5 class="text-lg font-medium text-slate-700 dark:text-slate-300 mb-3">About <i class="fas fa-minus text-primary-500"></i></h5>
@@ -147,6 +143,7 @@
                                 </div>
                             </div><!--end card-body-->
                         </div> <!--end card-->
+                    </form>
                     </div><!--end col-->
                     <div class="sm:col-span-12  md:col-span-12 lg:col-span-6 xl:col-span-6 ">
                         <div class="w-full relative overflow-hidden">

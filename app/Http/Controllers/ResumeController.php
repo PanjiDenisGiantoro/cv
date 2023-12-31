@@ -20,7 +20,7 @@ class ResumeController extends Controller
      */
     public function create()
     {
-        //
+        return view('biodata.resume');
     }
 
     /**
@@ -34,9 +34,11 @@ class ResumeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Resume $resume)
+    public function show(Resume $resume , $slug)
     {
-        //
+        $data = Resume::where('slug', $slug)->firstOrFail();
+        return view('biodata.resume');
+
     }
 
     /**

@@ -56,6 +56,12 @@ class CanvasUiController extends Controller
         }
     }
 
+    public function getPost()
+    {
+        $data =  Post::latest()->published()->with('user', 'topic')->get();
+        return view('blog.index', compact('data'));
+    }
+
     /**
      * @param \Illuminate\Http\Request $request
      * @return string
@@ -144,5 +150,10 @@ class CanvasUiController extends Controller
         $user = User::find($id);
 
         return $user ? response()->json($user->posts()->published()->with('user', 'topic')->paginate(), 200) : response()->json(null, 200);
+    }
+    public function show($slug)
+    {
+        $data = Post::where('slug', $slug)->with('user', 'topic')->firstOrFail();
+        return view('blog.show', compact('data'));
     }
 }

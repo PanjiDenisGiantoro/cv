@@ -17,13 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 //    get table invest_product
     return view('welcome', [
-        'invest_products' => \App\Models\Invest_products::all()
+        'blog' => \Canvas\Models\Post::latest()->published()->with('user', 'topic')->get(),
     ]);
 });
 
-Route::get('/products',\App\Http\Controllers\GetDataInvestProductController::class);
+Route::get('/products', \App\Http\Controllers\GetDataInvestProductController::class);
 Route::prefix('resume')->group(function () {
-    Route::get('/',[\App\Http\Controllers\ResumeController::class,'index'])->name('resume.index');
+    Route::get('/', [\App\Http\Controllers\ResumeController::class, 'index'])->name('resume.index');
 });
 
 Route::get('/dashboard', function () {
@@ -37,13 +37,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+Route::prefix('blog')->group(function () {
+    Route::get('/', [App\Http\Controllers\CanvasUiController::class, 'getPost'])->name('blog.index');
+    Route::get('/{slug}', [\App\Http\Controllers\CanvasUiController::class, 'show'])->name('blog.show');
+});
+
+require __DIR__ . '/auth.php';
 
 Route::prefix('canvas-ui')->group(function () {
     Route::prefix('api')->group(function () {
         Route::get('posts', [\App\Http\Controllers\CanvasUiController::class, 'getPosts']);
         Route::get('posts/{slug}', [\App\Http\Controllers\CanvasUiController::class, 'showPost'])
-             ->middleware('Canvas\Http\Middleware\Session');
+            ->middleware('Canvas\Http\Middleware\Session');
         Route::get('tags', [\App\Http\Controllers\CanvasUiController::class, 'getTags']);
         Route::get('tags/{slug}', [\App\Http\Controllers\CanvasUiController::class, 'showTag']);
         Route::get('tags/{slug}/posts', [\App\Http\Controllers\CanvasUiController::class, 'getPostsForTag']);
@@ -57,6 +62,6 @@ Route::prefix('canvas-ui')->group(function () {
     });
 
     Route::get('/{view?}', [\App\Http\Controllers\CanvasUiController::class, 'index'])
-         ->where('view', '(.*)')
-         ->name('canvas-ui');
+        ->where('view', '(.*)')
+        ->name('canvas-ui');
 });

@@ -538,132 +538,46 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 wow fadeInRight">
-                        <h4 class="title">This is my story</h4>
+                        <h4 class="title">This is my Article</h4>
                         <h2 class="title">My Blog</h2>
                         <div class="title-underline"></div>
                     </div>
                 </div>
+
                 <div class="row wow fadeInRight" data-wow-delay=".25s">
-                    <div class="col-lg-4 col-md-6 mb30">
-                        <div class="bloglist item">
-                            <div class="post-content">
-                                <div class="post-image d-hover-zoom">
-                                    <a class="image-popup" href="{{ asset('assets') }}/images/news/1.jpg">
-                                        <img alt="" src="{{ asset('assets') }}/images/news/1.jpg">
-                                    </a>
-                                    <div class="post-info">
-                                        <div class="inner">
-                                            <span class="post-date">10 Dec 2020</span>
+
+                    @foreach($blog as $blogs)
+                        <div class="col-lg-4 col-md-6 mb30">
+                            <div class="bloglist item">
+                                <div class="post-content">
+                                    <div class="post-image d-hover-zoom">
+                                        <a class="image-popup" href="{{ url($blogs->featured_image) }}">
+                                            <img alt="" class="
+                                            img-fluid h-100 w-100" src="
+                                            {{ url($blogs->featured_image) }}
+                                            " />
+                                        </a>
+                                        <div class="post-info">
+                                            <div class="inner">
+                                                <span class="post-date">
+                                                    {{ $blogs->created_at->format('d M Y') }}
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="post-text">
-                                    <h4><a href="blog-single.html">Better User Interface</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <div class="post-text">
+                                        <h4><a href="{{ url('blog/'.$blogs->slug) }}">
+                                                {{ $blogs->title }}
+                                            </a></h4>
+                                        <p>
+{{--                                            agar convert tag html tidak ada--}}
+                                            {{ strip_tags(substr($blogs->body, 0, 200)) }}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb30">
-                        <div class="bloglist item">
-                            <div class="post-content">
-                                <div class="post-image d-hover-zoom">
-                                    <a class="image-popup" href="{{ asset('assets') }}/images/news/2.jpg">
-                                        <img alt="" src="{{ asset('assets') }}/images/news/2.jpg">
-                                    </a>
-                                    <div class="post-info">
-                                        <div class="inner">
-                                            <span class="post-date">10 Dec 2020</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="post-text">
-                                    <h4><a href="blog-single.html">Experts Web Design Tips</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb30">
-                        <div class="bloglist item">
-                            <div class="post-content">
-                                <div class="post-image d-hover-zoom">
-                                    <a class="image-popup" href="{{ asset('assets') }}/images/news/3.jpg">
-                                        <img alt="" src="{{ asset('assets') }}/images/news/3.jpg">
-                                    </a>
-                                    <div class="post-info">
-                                        <div class="inner">
-                                            <span class="post-date">10 Dec 2020</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="post-text">
-                                    <h4><a href="blog-single.html">Importance Of Web Design</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb30">
-                        <div class="bloglist item">
-                            <div class="post-content">
-                                <div class="post-image d-hover-zoom">
-                                    <a class="image-popup" href="{{ asset('assets') }}/images/news/4.jpg">
-                                        <img alt="" src="{{ asset('assets') }}/images/news/4.jpg">
-                                    </a>
-                                    <div class="post-info">
-                                        <div class="inner">
-                                            <span class="post-date">10 Dec 2020</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="post-text">
-                                    <h4><a href="blog-single.html">Avoid These Erros In UI Design</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb30">
-                        <div class="bloglist item">
-                            <div class="post-content">
-                                <div class="post-image d-hover-zoom">
-                                    <a class="image-popup" href="{{ asset('assets') }}/images/news/5.jpg">
-                                        <img alt="" src="{{ asset('assets') }}/images/news/5.jpg">
-                                    </a>
-                                    <div class="post-info">
-                                        <div class="inner">
-                                            <span class="post-date">10 Dec 2020</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="post-text">
-                                    <h4><a href="blog-single.html">Make Mobile Website Faster</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb30">
-                        <div class="bloglist item">
-                            <div class="post-content">
-                                <div class="post-image d-hover-zoom">
-                                    <a class="image-popup" href="{{ asset('assets') }}/images/news/6.jpg">
-                                        <img alt="" src="{{ asset('assets') }}/images/news/6.jpg">
-                                    </a>
-                                    <div class="post-info">
-                                        <div class="inner">
-                                            <span class="post-date">10 Dec 2020</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="post-text">
-                                    <h4><a href="blog-single.html">How Sell Digital Product</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
