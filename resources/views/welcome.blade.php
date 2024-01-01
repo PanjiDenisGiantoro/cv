@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <title>Panji Denis Giantoro</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
-    <meta content="" name="author" />
+    <meta content="Panji Denis Giantoro" name="description" />
+    <meta content="Panji Denis Giantoro" name="keywords" />
+    <meta content="Panji Denis Giantoro" name="author" />
     <!--[if lt IE 9]>
     <script src="{{ asset('assets') }}/js/html5shiv.js"></script>
     <![endif]-->

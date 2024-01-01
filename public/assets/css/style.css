@@ -7923,7 +7923,8 @@ a:hover {
     height: 50px;
     margin: 0 auto;
     cursor: pointer;
-    padding-top: 25px
+    padding-top: 25px;
+    background: #000000;
 }
 
 #btn-exit .line-1,
@@ -8746,7 +8747,7 @@ body.dark-mode {
     box-shadow: 2px 20px 30px 0 rgba(20, 20, 20, .2)
 }
 
-.d-hover-zoom{    
+.d-hover-zoom{
     border-radius: 3px;
     overflow: hidden;
 }
@@ -12777,22 +12778,22 @@ img {
 }
 
 body::-webkit-scrollbar {
-  width: 12px;               
+  width: 12px;
 }
 
 body::-webkit-scrollbar-track {
-  background: none;        
+  background: none;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #404040;    
-  border-radius: 20px; 
+  background-color: #404040;
+  border-radius: 20px;
   border: none;
 }
 
 body.de_light::-webkit-scrollbar-track {
   background: #ffffff;
-  width: 12px;               
+  width: 12px;
 }
 
 body.de_light::-webkit-scrollbar-thumb {

@@ -32,7 +32,7 @@
 
 <body>
 <div id="wrapper">
-    <a href="javascript:history.back()" id="btn-exit" class="clicked">
+    <a href="javascript:history.back()" id="btn-exit"  class="clicked">
         <span class="line-1"></span>
         <span class="line-2"></span>
     </a>
