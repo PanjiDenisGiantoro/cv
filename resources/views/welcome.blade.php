@@ -6,7 +6,7 @@
     <title>Panji Denis Giantoro</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="Panji Denis Giantoro" name="description" />
-    <meta content="Panji Denis Giantoro" name="keywords" />
+    <meta content="Panji Denis Giantoro, Panji , Denis , Giantoro, Panji Denis, Fullstack Web Developer, " name="keywords" />
     <meta content="Panji Denis Giantoro" name="author" />
     <!--[if lt IE 9]>
     <script src="{{ asset('assets') }}/js/html5shiv.js"></script>
