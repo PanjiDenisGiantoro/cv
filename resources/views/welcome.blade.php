@@ -27,6 +27,15 @@
     <link href="{{ asset('assets') }}/css/coloring.css" rel="stylesheet" type="text/css" />
     <meta name="google-site-verification" content="qOywFBtgUw7MGnap9DAzfx8TOGRWcgd6xYFkBcLGEJE" />
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7CR9E5V42Q"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7CR9E5V42Q');
+</script>
 <body>
 <div id="wrapper">
     <div id="btn-exit">
