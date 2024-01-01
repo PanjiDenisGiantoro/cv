@@ -25,6 +25,7 @@
     <!-- color scheme -->
     <link id="colors" href="{{asset('assets') }}/css/colors/scheme-02.css" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets') }}/css/coloring.css" rel="stylesheet" type="text/css" />
+    <meta name="google-site-verification" content="qOywFBtgUw7MGnap9DAzfx8TOGRWcgd6xYFkBcLGEJE" />
 </head>
 <body>
 <div id="wrapper">
