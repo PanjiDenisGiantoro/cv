@@ -13,7 +13,9 @@
         "laravel/sanctum": "^3.3",
         "laravel/telescope": "^4.17",
         "laravel/tinker": "^2.8",
+        "nativephp/electron": "^0.4.0",
         "sentry/sentry-laravel": "^4.1",
+        "silviolleite/laravelpwa": "^2.0",
         "spatie/laravel-activitylog": "^4.7",
         "spatie/laravel-permission": "^6.3",
         "torann/geoip": "^3.0"

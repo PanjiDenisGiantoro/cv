@@ -26,8 +26,31 @@
     <link id="colors" href="{{asset('assets') }}/css/colors/scheme-02.css" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets') }}/css/coloring.css" rel="stylesheet" type="text/css" />
     <meta name="google-site-verification" content="qOywFBtgUw7MGnap9DAzfx8TOGRWcgd6xYFkBcLGEJE" />
+    @laravelPWA
+
 </head>
 <!-- Google tag (gtag.js) -->
+
+
+<!-- Tile for Win8 -->
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/icons/icon-512x512.png">
+
+<script type="text/javascript">
+    // Initialize the service worker
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/serviceworker.js', {
+            scope: '.'
+        }).then(function (registration) {
+            // Registration was successful
+            console.log('Laravel PWA: ServiceWorker registration successful with scope: ', registration.scope);
+        }, function (err) {
+            // registration failed :(
+            console.log('Laravel PWA: ServiceWorker registration failed: ', err);
+        });
+    }
+</script>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CR9E5V42Q"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
